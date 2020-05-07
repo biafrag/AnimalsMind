@@ -92,7 +92,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MAT-AnimalsBear_Bear
-    second: {fileID: 2100000, guid: 68f028202fd076e4f84d2ea2c542b58b, type: 2}
+    second: {fileID: 2100000, guid: cb4475ac0a8008443bef1e4176c22a51, type: 2}
   materials:
     importMaterials: 1
     materialName: 2
