@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 114987538399735778}
   - {fileID: 114850531630756378}
   - {fileID: 114351411185986266}
+  - {fileID: 295128723451167276}
 --- !u!114 &114001947540919812
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -2287,7 +2288,7 @@ MonoBehaviour:
     value: 0.55
   smoothness:
     overrideState: 1
-    value: 0.2
+    value: 0.477
   roundness:
     overrideState: 1
     value: 0.98
@@ -2361,7 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7e3c818412f16468e3b18c500430be, type: 3}
   m_Name: TiltShift
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -2370,10 +2371,10 @@ MonoBehaviour:
     value: 1
   areaSize:
     overrideState: 1
-    value: 1
+    value: 0.956
   amount:
     overrideState: 1
-    value: 0.476
+    value: 1
 --- !u!114 &114851873617166588
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -2628,3 +2629,25 @@ MonoBehaviour:
   downscaling:
     overrideState: 0
     value: 2
+--- !u!114 &295128723451167276
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be0f3e2e9c92846ae26c4e591cb156, type: 3}
+  m_Name: RadialBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  amount:
+    overrideState: 1
+    value: 0.209
+  iterations:
+    overrideState: 1
+    value: 5
