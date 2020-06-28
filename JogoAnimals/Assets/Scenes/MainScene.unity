@@ -887,53 +887,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 102990902}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &106298765 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4385080170328260021, guid: ff62b58c5a9ea164fa8ddf8038e10cd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 427350320}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &106298769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106298765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa338f161ff9d844bc790e9a0cb57d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  red: {fileID: 0}
---- !u!114 &106298770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106298765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 106298769}
-          m_MethodName: Blue
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &131880733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6885,6 +6838,7 @@ GameObject:
   - component: {fileID: 1143098328}
   - component: {fileID: 1143098332}
   - component: {fileID: 1143098333}
+  - component: {fileID: 1143098334}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -6994,6 +6948,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1143098334}
+          m_MethodName: zoomIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1143098333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7007,6 +6976,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   red: {fileID: 0}
+--- !u!114 &1143098334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143098327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fe37d39797de643911a50d62cefecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 547250691}
+  cam1: {fileID: 0}
+  cam2: {fileID: 0}
+  count: 0
 --- !u!1001 &1154609410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7276,10 +7261,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.8569336
-  m_Height: 7.5651994
+  m_Radius: 1.8569337
+  m_Height: 3.7138674
   m_Direction: 1
-  m_Center: {x: -0.9999999, y: 1.9084159, z: -4.2346787}
+  m_Center: {x: -1.0000011, y: -0.017252758, z: -4.2346144}
 --- !u!1001 &1212806101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11587,7 +11572,7 @@ PrefabInstance:
     - target: {fileID: 5440707293445741943, guid: 494f6d43e170e9145bc7865d243ee00b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1858664
+      value: 2.215
       objectReference: {fileID: 0}
     - target: {fileID: 5440707293445741943, guid: 494f6d43e170e9145bc7865d243ee00b,
         type: 3}
@@ -12322,6 +12307,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2070051402}
+          m_MethodName: zoomIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!136 &2070051401
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12332,10 +12332,26 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.7991371
-  m_Height: 2.142348
+  m_Radius: 1.7035012
+  m_Height: 4.5717864
   m_Direction: 1
-  m_Center: {x: -0.6448248, y: 0.42767304, z: -4.019644}
+  m_Center: {x: -0.95426947, y: 0.29206836, z: -4.028682}
+--- !u!114 &2070051402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070051395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fe37d39797de643911a50d62cefecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 547250691}
+  cam1: {fileID: 547250688}
+  cam2: {fileID: 534669902}
+  count: 0
 --- !u!1001 &2080825909
 PrefabInstance:
   m_ObjectHideFlags: 0
