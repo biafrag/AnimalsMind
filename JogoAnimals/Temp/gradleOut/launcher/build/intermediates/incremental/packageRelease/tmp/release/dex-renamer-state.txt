@@ -1,0 +1,4 @@
+#Sun Jun 28 15:52:05 BRT 2020
+base.0=C\:\\Bianca\\Bianca\\2020.1\\VR\\AnimalsMind\\JogoAnimals\\Temp\\gradleOut\\launcher\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
