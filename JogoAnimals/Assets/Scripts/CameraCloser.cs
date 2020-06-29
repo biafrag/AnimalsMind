@@ -7,6 +7,7 @@ public class CameraCloser : MonoBehaviour
     public Camera cam;
     public GameObject cam1;
     public GameObject cam2;
+    public GvrReticlePointer pointer;
     public int count = 0;
     public string Status;
     public Transform currentView;
@@ -49,6 +50,8 @@ public class CameraCloser : MonoBehaviour
                 float time = audioMain.time;
                 audioOwl.SetScheduledStartTime(time);
                 cam2.SetActive(true);
+                pointer.transform.parent = cam2.transform;
+                pointer.UpdateDiameters();
 
                 print(Status);
             }

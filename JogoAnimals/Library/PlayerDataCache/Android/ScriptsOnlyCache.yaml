@@ -9,20 +9,12 @@ ScriptsOnlyBuild:
     - SwitchCameras
     - TestColorScript
     Unity.Postprocessing.Runtime.dll:
-    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
-    - UnityEngine.Rendering.PostProcessing.AutoExposure
-    - UnityEngine.Rendering.PostProcessing.Bloom
-    - UnityEngine.Rendering.PostProcessing.ChromaticAberration
     - UnityEngine.Rendering.PostProcessing.ColorGrading
-    - UnityEngine.Rendering.PostProcessing.DepthOfField
     - UnityEngine.Rendering.PostProcessing.Grain
-    - UnityEngine.Rendering.PostProcessing.LensDistortion
-    - UnityEngine.Rendering.PostProcessing.MotionBlur
     - UnityEngine.Rendering.PostProcessing.PostProcessLayer
     - UnityEngine.Rendering.PostProcessing.PostProcessProfile
     - UnityEngine.Rendering.PostProcessing.PostProcessResources
     - UnityEngine.Rendering.PostProcessing.PostProcessVolume
-    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -55,6 +47,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 72
       Script: {instanceID: 0}
     - Class: 81
@@ -72,35 +66,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11280}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11288}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11326}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11578}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11784}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 13458}
+      Script: {instanceID: 13456}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13540}
+      Script: {instanceID: 13538}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -110,6 +104,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 241
       Script: {instanceID: 0}
@@ -416,7 +414,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: f993c804909a6f65cc4e0bfad7b7ad2e
+      Hash: 79f3c648085f7ab617b12e6e8cdd7e1f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraCloser
@@ -969,4 +967,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Bianca/Bianca/2020.1/VR/AnimalsMind/JogoAnimals/AnimalsMind.apk
+  playerPath: C:/Bianca/Bianca/2020.1/VR/AnimalsMind/JogoAnimals/Build/AnimalsMind.apk
