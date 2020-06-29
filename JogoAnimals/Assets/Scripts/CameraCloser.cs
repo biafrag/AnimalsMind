@@ -46,13 +46,15 @@ public class CameraCloser : MonoBehaviour
         {
             if(doIt)
             {
+                audioMain.Pause();
+                audioOwl.time = audioMain.time;
+                Destroy(GameObject.Find("GvrReticlePointer1"));
+                cam1.tag = "OwlCamera";
                 cam1.SetActive(false);
-                float time = audioMain.time;
-                audioOwl.SetScheduledStartTime(time);
+                cam2.tag = "MainCamera";
                 cam2.SetActive(true);
-                pointer.transform.parent = cam2.transform;
-                pointer.UpdateDiameters();
-
+                audioOwl.Play();
+                doIt = false;
                 print(Status);
             }
         }
