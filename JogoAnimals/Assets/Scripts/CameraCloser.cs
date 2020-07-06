@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class CameraCloser : MonoBehaviour
 {
-    public Camera cam;
-    public GameObject cam1;
-    public GameObject cam2;
+    public GameObject mainCamera;
+    public GameObject owlCamera;
     public GvrReticlePointer pointer;
     public int count = 0;
-    public string Status;
-    public Transform currentView;
+    public Transform Owlview;
+
     private bool doIt = false;
     public AudioSource audioMain;
     public AudioSource audioOwl;
+
+    Transform currentView;
+
+
 
 
     public void zoomIn()
     {
 
-        transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * 2);
+        transform.position = Vector3.Lerp(transform.position, Owlview.position, Time.deltaTime * 2);
 
     }
 
@@ -31,7 +34,14 @@ public class CameraCloser : MonoBehaviour
             zoomIn();
         }
     }
-
+void setupCameras(GameObject c1, GameObject c2, AudioSource audio1, AudioSource audio2)
+{
+        audio1.Pause();
+        audio2.time = audioMain.time;
+        c1.SetActive(false);
+        c2.SetActive(true);
+        audio2.Play();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -46,16 +56,12 @@ public class CameraCloser : MonoBehaviour
         {
             if(doIt)
             {
-                audioMain.Pause();
-                audioOwl.time = audioMain.time;
-                Destroy(GameObject.Find("GvrReticlePointer1"));
-                cam1.tag = "OwlCamera";
-                cam1.SetActive(false);
-                cam2.tag = "MainCamera";
-                cam2.SetActive(true);
-                audioOwl.Play();
+                //if()
+                {
+                    setupCameras(mainCamera, owlCamera, audioMain, audioOwl);
+
+                }
                 doIt = false;
-                print(Status);
             }
         }
     }

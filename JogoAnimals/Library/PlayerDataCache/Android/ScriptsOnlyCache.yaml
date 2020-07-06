@@ -19,6 +19,14 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -52,6 +60,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 72
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -59,6 +69,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -81,28 +95,30 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11912}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12402}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 13104}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 13452}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 13542}
+      Script: {instanceID: 13512}
     - Class: 114
-      Script: {instanceID: 41052}
+      Script: {instanceID: 13544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -417,7 +433,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 79f3c648085f7ab617b12e6e8cdd7e1f
+      Hash: 6db7b8585f9e828681999039773749b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraCloser
@@ -451,6 +467,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessEffectSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 07558bdeb8dd04e778c0567f4b7ca57d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InitialPosition
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -967,12 +989,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 07558bdeb8dd04e778c0567f4b7ca57d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InitialPosition
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
