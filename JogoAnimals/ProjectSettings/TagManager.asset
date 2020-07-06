@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - OwlCamera
+  - Sphere
+  - Owl
   layers:
   - Default
   - TransparentFX

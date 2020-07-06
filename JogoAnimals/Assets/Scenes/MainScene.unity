@@ -16401,12 +16401,38 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1283918150}
+          m_MethodName: GVROn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1283918149}
           m_MethodName: zoomIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1283918150}
+          m_MethodName: GVROff
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16875,7 +16901,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -18210,7 +18236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283918147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54fe37d39797de643911a50d62cefecd, type: 3}
   m_Name: 
@@ -18238,6 +18264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imgGaze: {fileID: 749874686}
   totalTime: 2
+  distanceOfRay: 10
 --- !u!1001 &1286998321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22137,10 +22164,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Owl
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 93c07e42f3e8a9542b9301ee9997a66a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Owl
+      objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 93c07e42f3e8a9542b9301ee9997a66a,
         type: 3}
       propertyPath: m_Name
       value: default
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 93c07e42f3e8a9542b9301ee9997a66a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Owl
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93c07e42f3e8a9542b9301ee9997a66a, type: 3}
@@ -29457,10 +29494,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070051395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa338f161ff9d844bc790e9a0cb57d5, type: 3}
+  m_Script: {fileID: 11500000, guid: bb7bbdd4ee0fb4b00affd98aadeddc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 0}
+  playerCamera: {fileID: 1283918147}
+  animalSpot: {fileID: 465354764}
 --- !u!114 &2070051400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29488,7 +29526,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
   - eventID: 0
     callback:
       m_PersistentCalls:

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +11,10 @@ public class GazeVR : MonoBehaviour
 	bool gvrStatus;
 	float gvrTimer;
 
+	bool inSpot = false;
+
+	public int distanceOfRay = 10;
+	private RaycastHit _hit;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,25 @@ public class GazeVR : MonoBehaviour
         {
         	gvrTimer += Time.deltaTime;
         	imgGaze.fillAmount = gvrTimer / totalTime;
+        }
+
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+        if(Physics.Raycast(ray, out _hit, distanceOfRay))
+        {
+
+        	if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Owl"))
+        	{
+        		print("hit owl!");
+        		if (!inSpot)
+        		{
+        			print("zoom on");
+        			imgGaze.fillAmount = 0;
+        			inSpot = true; //triggar 1 vez só (se nao crasha)
+        			_hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn();
+
+        		}
+        	}
         }
     }
 
