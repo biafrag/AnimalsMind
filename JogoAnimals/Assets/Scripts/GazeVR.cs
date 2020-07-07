@@ -36,7 +36,7 @@ public class GazeVR : MonoBehaviour
         if(Physics.Raycast(ray, out _hit, distanceOfRay))
         {
 
-        	if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Owl"))
+        	if(imgGaze.fillAmount == 1 && (_hit.transform.CompareTag("Owl") || _hit.transform.CompareTag("Dog")))
         	{
         		print("hit owl!");
         		if (!inSpot)

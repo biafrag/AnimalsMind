@@ -16531,9 +16531,10 @@ GameObject:
   - component: {fileID: 1143098328}
   - component: {fileID: 1143098332}
   - component: {fileID: 1143098333}
+  - component: {fileID: 1143098334}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16694,6 +16695,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   red: {fileID: 0}
+--- !u!114 &1143098334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143098327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7bbdd4ee0fb4b00affd98aadeddc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1283918147}
+  animalSpot: {fileID: 1143098331}
 --- !u!1001 &1148025699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25747,7 +25762,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1283918150}
+          m_MethodName: GVROn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1283918150}
+          m_MethodName: GVROff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!64 &1721952422
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25762,6 +25807,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8109662745768287758, guid: 8f13fb7c12814594787afe7c0b3bd102, type: 3}
+--- !u!114 &1721952423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721952418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7bbdd4ee0fb4b00affd98aadeddc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1283918147}
+  animalSpot: {fileID: 771251981}
 --- !u!1001 &1734317921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29577,10 +29636,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3545523387187697421, guid: 8f13fb7c12814594787afe7c0b3bd102,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dog
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 8f13fb7c12814594787afe7c0b3bd102,
         type: 3}
       propertyPath: m_Name
       value: AnimatedDog
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8f13fb7c12814594787afe7c0b3bd102,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dog
       objectReference: {fileID: 0}
     - target: {fileID: 4224801822505238522, guid: 8f13fb7c12814594787afe7c0b3bd102,
         type: 3}
