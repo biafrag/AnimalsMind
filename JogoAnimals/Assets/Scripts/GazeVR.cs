@@ -16,44 +16,49 @@ public class GazeVR : MonoBehaviour
 	public int distanceOfRay = 10;
 	private RaycastHit _hit;
 
+    public string S;
+    public bool inState;
     // Start is called before the first frame update
     void Start()
     {
-        
+        inState = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gvrStatus)
+        if (inState)
         {
-        	gvrTimer += Time.deltaTime;
-        	imgGaze.fillAmount = gvrTimer / totalTime;
-        }
+            if (gvrStatus)
+            {
+                gvrTimer += Time.deltaTime;
+                imgGaze.fillAmount = gvrTimer / totalTime;
+            }
 
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if(Physics.Raycast(ray, out _hit, distanceOfRay))
-        {
-
-        	if(imgGaze.fillAmount == 1 && (_hit.transform.CompareTag("Owl") || _hit.transform.CompareTag("Dog")))
-        	{
-        		print("hit owl!");
-        		if (!inSpot)
-        		{
-        			print("zoom on");
-        			imgGaze.fillAmount = 0;
-        			inSpot = true; //triggar 1 vez só (se nao crasha)
-        			_hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn();
-
-        		}
-        	}
+            if (Physics.Raycast(ray, out _hit, distanceOfRay))
+            {
+                if (imgGaze.fillAmount == 1)
+                {
+                    if (!inSpot)
+                    {
+                        print("zoom on");
+                        imgGaze.fillAmount = 0;
+                        inSpot = true; //triggar 1 vez só (se nao crasha)
+                        inState = false;
+                        _hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn();
+                    }
+                }
+            }
         }
     }
 
     public void GVROn()
     {
     	gvrStatus = true;
+        S = "To no Gaze";
+        print(S);
     }
 
 	public void GVROff()

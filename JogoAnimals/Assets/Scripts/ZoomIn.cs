@@ -7,8 +7,10 @@ public class ZoomIn : MonoBehaviour
 	public GameObject playerCamera;
 	public Transform animalSpot;
 
-	bool zoom = false;
-
+	public bool zoom = false;
+    public bool zoomJustFinished = false;
+    public string S;
+    public GameObject button;
 	public void zoomIn()
     {
     	zoom = true;
@@ -29,7 +31,12 @@ public class ZoomIn : MonoBehaviour
         if(playerCamera.transform.position == animalSpot.position)
         {
         	zoom = false;
-        	print("zoom off");
+            zoomJustFinished = true;
+            S = "Terminei zoom";
+            print(S);
+            button.SetActive(true);
+            transform.gameObject.GetComponent<TouchAnimal>().inState = true;
+            print("zoom off");
         }
     }
 
