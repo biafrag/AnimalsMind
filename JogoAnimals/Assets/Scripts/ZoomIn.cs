@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZoomIn : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class ZoomIn : MonoBehaviour
     public bool zoomJustFinished = false;
     public string S;
     public GameObject button;
-	public void zoomIn()
+	public void zoomIn(Image imgGaze)
     {
     	zoom = true;
     }
@@ -20,7 +21,6 @@ public class ZoomIn : MonoBehaviour
     {
         if(zoom)
         {
-        	print("zooming");
             playerCamera.transform.position = Vector3.MoveTowards(playerCamera.transform.position, animalSpot.position, Time.deltaTime * 2);
         }
     }
@@ -32,17 +32,8 @@ public class ZoomIn : MonoBehaviour
         {
         	zoom = false;
             zoomJustFinished = true;
-            S = "Terminei zoom";
-            print(S);
             button.SetActive(true);
             transform.gameObject.GetComponent<TouchAnimal>().inState = true;
-            print("zoom off");
         }
-    }
-
-    public void Activate()
-    {
-        // count++;
-        // zoom = true;
     }
 }

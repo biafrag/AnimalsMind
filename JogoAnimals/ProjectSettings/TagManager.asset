@@ -9,6 +9,7 @@ TagManager:
   - Owl
   - Dog
   - Button
+  - Animals
   layers:
   - Default
   - TransparentFX

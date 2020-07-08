@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
     - InitialPosition
+    - ResetAll
     - SwitchCameras
     - TestColorScript
     - TouchAnimal
@@ -24,6 +25,12 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -123,17 +130,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13160}
     - Class: 114
-      Script: {instanceID: 13458}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13518}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 13550}
+      Script: {instanceID: 13472}
     - Class: 114
-      Script: {instanceID: 13588}
+      Script: {instanceID: 13522}
     - Class: 114
-      Script: {instanceID: 160224}
+      Script: {instanceID: 13554}
+    - Class: 114
+      Script: {instanceID: 13592}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -417,7 +426,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 9109205fd180ab517443a29e89c613fe
+      Hash: 9cefb85209b78f4bc0a9ad3c8ba6c129
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TouchAnimal
@@ -843,6 +852,18 @@ ScriptsOnlyBuild:
     className: ScrubberEvents
   - hash:
       serializedVersion: 2
+      Hash: ccec66d8eb783910d410cebd8c13a385
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackToMainView
+  - hash:
+      serializedVersion: 2
+      Hash: 1ce4feef6b4ee878152edecc279c0c63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ResetAll
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1045,12 +1066,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ccec66d8eb783910d410cebd8c13a385
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackToMainView
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

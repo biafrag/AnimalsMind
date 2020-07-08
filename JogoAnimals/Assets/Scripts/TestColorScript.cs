@@ -14,7 +14,7 @@ public class TestColorScript : MonoBehaviour
 
     public void Blue()
     {
-        GetComponent<Renderer>().material.color = Color.blue;
+        GetComponent<Renderer>().material.color = new Color(1.0f, 0.6f, 0.8f);
 
     }
 

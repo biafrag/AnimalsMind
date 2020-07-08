@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TouchAnimal : MonoBehaviour
 {
-    public Image imgGaze;
+   public Image imgGaze;
 
     public float totalTime = 2;
     bool gvrStatus;
@@ -15,7 +15,7 @@ public class TouchAnimal : MonoBehaviour
 
     public int distanceOfRay = 10;
     private RaycastHit _hit;
-
+    public GameObject button;
     public string S;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class TouchAnimal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inState)
+       if (inState)
         {
             if (gvrStatus)
             {
@@ -40,7 +40,10 @@ public class TouchAnimal : MonoBehaviour
             {
                 if (imgGaze.fillAmount == 1)
                 {
+                    S = "Deu ruim";
+                    print(S);
                     transform.gameObject.GetComponent<ChangeCamera>().changeCamera();
+                    button.transform.gameObject.GetComponent<ResetAll>().Reset();
                     inState = false;
                 }
             }
@@ -49,6 +52,8 @@ public class TouchAnimal : MonoBehaviour
 
     public void GVROn()
     {
+        imgGaze.fillAmount = 0;
+        gvrTimer = 0;
         gvrStatus = true;
         S = "Touch Animal";
         print(S);
@@ -60,4 +65,5 @@ public class TouchAnimal : MonoBehaviour
         gvrTimer = 0;
         imgGaze.fillAmount = 0;
     }
+    
 }

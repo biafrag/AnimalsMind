@@ -34,8 +34,8 @@ public class CameraCloser : MonoBehaviour
             zoomIn();
         }
     }
-void setupCameras(GameObject c1, GameObject c2, AudioSource audio1, AudioSource audio2)
-{
+    void setupCameras(GameObject c1, GameObject c2, AudioSource audio1, AudioSource audio2)
+    {
         audio1.Pause();
         audio2.time = audioMain.time;
         c1.SetActive(false);

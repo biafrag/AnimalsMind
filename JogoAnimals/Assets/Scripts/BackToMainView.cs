@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class BackToMainView : MonoBehaviour
 {
@@ -31,21 +33,19 @@ public class BackToMainView : MonoBehaviour
             imgGaze.fillAmount = gvrTimer / totalTime;
         }
 
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-
-        if (Physics.Raycast(ray, out _hit, distanceOfRay))
+        if (imgGaze.fillAmount == 1)
         {
-            //S = "Clique";
-            //print(S);
-            if (imgGaze.fillAmount == 1)
+
+            if (!inSpot)
             {
-                if (!inSpot)
+                //camera.transform.position = GameObject.Find("MainView").transform.position;
+                inSpot = true;
+                //camera.GetComponent<ResetAll>().Reset();
+                Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+                Physics.Raycast(ray, out _hit, distanceOfRay);
+                if(!_hit.transform)
                 {
-                    S = "Clique";
-                    print(S);
-                    imgGaze.fillAmount = 0;
-                    camera.transform.position = new Vector3(0, 0, 0);
-                    inSpot = true;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
             }
         }
