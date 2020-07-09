@@ -1,15 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - BackToMainView
     - CameraCloser
     - ChangeCamera
     - ChangeForAnimalVision
+    - GazeInside
     - GazeVR
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
+    - Readme
     - ResetAll
     - TestColorScript
     - TouchAnimal
@@ -125,31 +129,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12152}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 12214}
     - Class: 114
       Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12656}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13160}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13162}
     - Class: 114
       Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13462}
+      Script: {instanceID: 13272}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 13464}
     - Class: 114
-      Script: {instanceID: 13522}
+      Script: {instanceID: 13474}
     - Class: 114
-      Script: {instanceID: 13554}
+      Script: {instanceID: 13524}
     - Class: 114
-      Script: {instanceID: 13592}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 104210}
+      Script: {instanceID: 13594}
+    - Class: 114
+      Script: {instanceID: 15870}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -571,6 +577,12 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
+      Hash: 87bf2d8dfdacbb000a527bab2cdb3ac8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GazeInside
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -665,6 +677,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 4c5fc137c3cb8a2bf6d134f88b1ac655
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeForAnimalVision
   - hash:
       serializedVersion: 2
       Hash: 56a6851d67a6fe1dd99657316aec8c9d
@@ -1067,12 +1085,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 6f9de33baca9fe4696c6b24c86fcc0b0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeForAnimalVision
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

@@ -7746,17 +7746,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506166065}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 12.4}
-  m_LocalScale: {x: 1.1424, y: 1.1424, z: 1.1424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464229226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.2, y: 59.1}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6, y: 63}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506166067
 MonoBehaviour:
@@ -8290,18 +8290,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539431029}
-  m_LocalRotation: {x: -0.7776219, y: -0.0062932293, z: 0.014483676, w: 0.6285338}
-  m_LocalPosition: {x: 0, y: 0, z: -5.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.09247265, y: 0.3822651, z: 0.91910625, w: 0.023789322}
+  m_LocalPosition: {x: 0, y: 0, z: 12.08}
+  m_LocalScale: {x: -0.012069142, y: -0.012069142, z: -0.012069142}
   m_Children:
   - {fileID: 1464229226}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: -77.78001, y: -171.733, z: 172.40001}
+  m_Father: {fileID: 1283918148}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -44.29, y: 15.241001, z: 170.80101}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 30, y: 43}
-  m_SizeDelta: {x: 1193.75, y: 223.75}
+  m_AnchoredPosition: {x: -1.27, y: 13.41}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &541398871
 PrefabInstance:
@@ -8423,7 +8423,7 @@ Transform:
   - {fileID: 1623026132}
   - {fileID: 234281167}
   m_Father: {fileID: 1283918148}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &547250690
 AudioListener:
@@ -18357,6 +18357,7 @@ Transform:
   m_LocalPosition: {x: 1.1546705, y: 32.199787, z: -15.228697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 539431033}
   - {fileID: 547250689}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -21372,13 +21373,14 @@ GameObject:
   - component: {fileID: 1464229227}
   - component: {fileID: 1464229230}
   - component: {fileID: 1464229231}
+  - component: {fileID: 1464229232}
   m_Layer: 5
   m_Name: Button
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1464229226
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21387,8 +21389,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464229225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.049088}
-  m_LocalScale: {x: 0.012714381, y: 0.012714381, z: 0.012714381}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 506166066}
   m_Father: {fileID: 539431033}
@@ -21396,7 +21398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.092, y: 1.3343}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464229227
@@ -21554,6 +21556,32 @@ MonoBehaviour:
   distanceOfRay: 10
   camera: {fileID: 1283918147}
   S: 
+--- !u!61 &1464229232
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464229225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07534027, y: 21.73521}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 98.25354, y: 142.91293}
+  m_EdgeRadius: 0
 --- !u!1001 &1464607364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23967,7 +23995,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.87
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
