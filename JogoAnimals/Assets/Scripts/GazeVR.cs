@@ -48,6 +48,8 @@ public class GazeVR : MonoBehaviour
                             imgGaze.fillAmount = 0;
                             inSpot = true; //triggar 1 vez só (se nao crasha)
                             inState = false;
+                            S = "Entrou";
+                            print(S);
                             _hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn();
                         }
                     }
@@ -58,14 +60,17 @@ public class GazeVR : MonoBehaviour
 
     public void GVROn()
     {
+        imgGaze.fillAmount = 0;
+        inSpot = false;
         gvrTimer = 0;
-        print("Entrou aqui");
     	gvrStatus = true;
     }
 
 	public void GVROff()
     {
-    	gvrStatus = false;
+        S = "Saiu";
+        print(S);
+        gvrStatus = false;
     	gvrTimer = 0;
     	imgGaze.fillAmount = 0;
         inSpot = false;

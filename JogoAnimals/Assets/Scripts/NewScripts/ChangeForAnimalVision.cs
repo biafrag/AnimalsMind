@@ -7,7 +7,8 @@ public class ChangeForAnimalVision : MonoBehaviour
 {
     public GameObject[] Owl;
     public GameObject[] Dog;
-
+    public string currentAnimal = "Bolotas";
+    public string CurrentAnimal;
     enum Part
     {
         Animal,
@@ -19,22 +20,40 @@ public class ChangeForAnimalVision : MonoBehaviour
     {
         S = "Entrou";
         print(S);
-        if (string.Compare(animal,"Owl") == 0)
+        if (string.Compare(animal, "Owl") == 0 || string.Compare(animal, "default") == 0)
         {
-            Owl[(int) Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
+            Owl[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
             transform.position = Owl[(int)Part.Animal].transform.position;
             AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
             AudioSource audio = Owl[(int)Part.Audio].GetComponent<AudioSource>();
-
             mainAudio.outputAudioMixerGroup = audio.outputAudioMixerGroup;
         }
-        else if(string.Compare(animal, "AnimatedDog") == 0)
+        else if (string.Compare(animal, "AnimatedDog") == 0)
         {
 
             Dog[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
             transform.position = Dog[(int)Part.Animal].transform.position;
             //AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
             //mainAudio.outputAudioMixerGroup = B.outputAudioMixerGroup;
+            currentAnimal = animal;
         }
+        currentAnimal = animal;
+        GetComponent<GazeInside>().imgGaze.fillAmount = 0;
+
+        GetComponent<GazeInside>().inState = true;
+        print(CurrentAnimal);
+    }
+    public void changeOther(string animalGo)
+    {
+        if(string.Compare(currentAnimal, "Owl") == 0 || string.Compare(currentAnimal, "default") == 0)
+        {
+            Owl[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
+        }
+        else if (string.Compare(currentAnimal, "AnimatedDog") == 0)
+        {
+
+            Dog[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
+        }
+        change(animalGo);
     }
 }
