@@ -17,10 +17,12 @@ public class TouchAnimal : MonoBehaviour
     private RaycastHit _hit;
     public GameObject button;
     public string S;
+    GameObject cam;
     // Start is called before the first frame update
     void Start()
     {
         inState = false;
+        cam = GameObject.Find("MainCameraRig");
     }
 
     // Update is called once per frame
@@ -42,8 +44,7 @@ public class TouchAnimal : MonoBehaviour
                 {
                     S = "Deu ruim";
                     print(S);
-                    transform.gameObject.GetComponent<ChangeCamera>().changeCamera();
-                    button.transform.gameObject.GetComponent<ResetAll>().Reset();
+                    cam.transform.gameObject.GetComponent<ChangeForAnimalVision>().change(transform.name);
                     inState = false;
                 }
             }

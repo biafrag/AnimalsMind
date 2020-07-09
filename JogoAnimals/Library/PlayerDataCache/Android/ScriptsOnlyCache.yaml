@@ -4,24 +4,31 @@ ScriptsOnlyBuild:
     - BackToMainView
     - CameraCloser
     - ChangeCamera
+    - ChangeForAnimalVision
     - GazeVR
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
-    - InitialPosition
     - ResetAll
-    - SwitchCameras
     - TestColorScript
     - TouchAnimal
     - ZoomIn
     Unity.Postprocessing.Runtime.dll:
+    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
+    - UnityEngine.Rendering.PostProcessing.AutoExposure
+    - UnityEngine.Rendering.PostProcessing.Bloom
+    - UnityEngine.Rendering.PostProcessing.ChromaticAberration
     - UnityEngine.Rendering.PostProcessing.ColorGrading
+    - UnityEngine.Rendering.PostProcessing.DepthOfField
     - UnityEngine.Rendering.PostProcessing.Grain
+    - UnityEngine.Rendering.PostProcessing.LensDistortion
+    - UnityEngine.Rendering.PostProcessing.MotionBlur
     - UnityEngine.Rendering.PostProcessing.PostProcessLayer
     - UnityEngine.Rendering.PostProcessing.PostProcessProfile
     - UnityEngine.Rendering.PostProcessing.PostProcessResources
     - UnityEngine.Rendering.PostProcessing.PostProcessVolume
+    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -116,8 +123,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12056}
-    - Class: 114
       Script: {instanceID: 12152}
     - Class: 114
       Script: {instanceID: 12358}
@@ -143,6 +148,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13554}
     - Class: 114
       Script: {instanceID: 13592}
+    - Class: 114
+      Script: {instanceID: 104210}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -598,12 +605,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SelectionManager
-  - hash:
-      serializedVersion: 2
-      Hash: 6cec489c2f16e7245144d05a344c968b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SwitchCameras
   - hash:
       serializedVersion: 2
       Hash: 10e5e5a6a80d1d5521d8e42ecdcff303
@@ -1066,6 +1067,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6f9de33baca9fe4696c6b24c86fcc0b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeForAnimalVision
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

@@ -12,7 +12,7 @@ public class ZoomIn : MonoBehaviour
     public bool zoomJustFinished = false;
     public string S;
     public GameObject button;
-	public void zoomIn(Image imgGaze)
+	public void zoomIn()
     {
     	zoom = true;
     }

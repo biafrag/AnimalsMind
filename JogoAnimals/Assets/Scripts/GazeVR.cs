@@ -48,7 +48,7 @@ public class GazeVR : MonoBehaviour
                             imgGaze.fillAmount = 0;
                             inSpot = true; //triggar 1 vez só (se nao crasha)
                             inState = false;
-                            _hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn(imgGaze);
+                            _hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn();
                         }
                     }
                 }

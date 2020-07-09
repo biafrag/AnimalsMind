@@ -31,6 +31,8 @@ public class BackToMainView : MonoBehaviour
         {
             gvrTimer += Time.deltaTime;
             imgGaze.fillAmount = gvrTimer / totalTime;
+            S = "Carregando";
+            print(S);
         }
 
         if (imgGaze.fillAmount == 1)
@@ -43,6 +45,8 @@ public class BackToMainView : MonoBehaviour
                 //camera.GetComponent<ResetAll>().Reset();
                 Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
                 Physics.Raycast(ray, out _hit, distanceOfRay);
+                S = "Completou";
+                print(S);
                 if(!_hit.transform)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -54,6 +58,9 @@ public class BackToMainView : MonoBehaviour
 
     public void GVROn()
     {
+        inSpot = false;
+        S = "Entrou";
+        print(S);
         gvrStatus = true;
     }
 
@@ -62,5 +69,6 @@ public class BackToMainView : MonoBehaviour
         gvrStatus = false;
         gvrTimer = 0;
         imgGaze.fillAmount = 0;
+        S = "";
     }
 }
