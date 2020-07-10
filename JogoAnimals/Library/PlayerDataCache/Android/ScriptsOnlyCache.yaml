@@ -1,21 +1,22 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
     - BackToMainView
+    - Blur
     - CameraCloser
     - ChangeCamera
     - ChangeForAnimalVision
+    - ChangeMaterial
+    - DitzelGames.PostProcessingTextureOverlay.TextureOverlay
     - GazeInside
     - GazeVR
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
-    - Readme
     - ResetAll
     - TestColorScript
+    - ThermalVision
     - TouchAnimal
     - ZoomIn
     Unity.Postprocessing.Runtime.dll:
@@ -39,8 +40,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -74,6 +77,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -99,63 +104,69 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11280}
-    - Class: 114
-      Script: {instanceID: 11282}
-    - Class: 114
-      Script: {instanceID: 11284}
-    - Class: 114
       Script: {instanceID: 11286}
+    - Class: 114
+      Script: {instanceID: 11288}
+    - Class: 114
+      Script: {instanceID: 11290}
     - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11582}
+      Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11704}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11736}
+      Script: {instanceID: 11588}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 11914}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 12052}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 12152}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12214}
+      Script: {instanceID: 12058}
     - Class: 114
-      Script: {instanceID: 12410}
+      Script: {instanceID: 12160}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 12664}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 12972}
     - Class: 114
-      Script: {instanceID: 13270}
+      Script: {instanceID: 13124}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13464}
+      Script: {instanceID: 13280}
+    - Class: 114
+      Script: {instanceID: 13282}
     - Class: 114
       Script: {instanceID: 13474}
     - Class: 114
-      Script: {instanceID: 13524}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 13556}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13594}
+      Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 15870}
+      Script: {instanceID: 13604}
+    - Class: 114
+      Script: {instanceID: 15928}
+    - Class: 114
+      Script: {instanceID: 90438}
+    - Class: 114
+      Script: {instanceID: 158820}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -565,6 +576,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 9567e09f015023fbb09c8e370c1d599b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Blur
+  - hash:
+      serializedVersion: 2
       Hash: f464b104d49d743663de270dcd5c3972
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -679,7 +696,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 4c5fc137c3cb8a2bf6d134f88b1ac655
+      Hash: 76b62d429645e3b7a3a89a9fa015110f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangeForAnimalVision
@@ -767,6 +784,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 17508a1d7e676b1ffabf994ecf74c930
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DitzelGames.PostProcessingTextureOverlay
+    className: TextureOverlay
   - hash:
       serializedVersion: 2
       Hash: 1cbb684877139a8fcd5903f27462e898
@@ -1085,6 +1108,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a8ba543a45374257c108ab401fe2c26f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ThermalVision
+  - hash:
+      serializedVersion: 2
+      Hash: 14b49715d99a89cfb811c7a2170dded6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeMaterial
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

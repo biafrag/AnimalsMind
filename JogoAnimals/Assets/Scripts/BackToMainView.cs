@@ -15,10 +15,11 @@ public class BackToMainView : MonoBehaviour
 
     public int distanceOfRay = 10;
     private RaycastHit _hit;
-    public GameObject camera;
+    public Camera camera;
 
     bool inSpot = false;
     public string S;
+    public GameObject button;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,22 +35,26 @@ public class BackToMainView : MonoBehaviour
             S = "Carregando";
             print(S);
         }
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if (imgGaze.fillAmount == 1)
+        if (Physics.Raycast(ray, out _hit, distanceOfRay))
         {
-
-            if (!inSpot)
+            if (imgGaze.fillAmount == 1)
             {
-                //camera.transform.position = GameObject.Find("MainView").transform.position;
-                inSpot = true;
-                //camera.GetComponent<ResetAll>().Reset();
-                Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-                Physics.Raycast(ray, out _hit, distanceOfRay);
-                S = "Completou";
-                print(S);
-                if(!_hit.transform)
+
+                if (!inSpot)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    S = "Completou";
+                    print(S);
+                    //camera.transform.position = GameObject.Find("MainView").transform.position;
+                    inSpot = true;
+                    //camera.GetComponent<ResetAll>().Reset();
+                    Physics.Raycast(ray, out _hit, distanceOfRay);
+                    if (_hit.transform.gameObject.CompareTag("Button"))
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    }
+
                 }
             }
         }
@@ -58,6 +63,7 @@ public class BackToMainView : MonoBehaviour
 
     public void GVROn()
     {
+        imgGaze.fillAmount = 0;
         inSpot = false;
         S = "Entrou";
         print(S);

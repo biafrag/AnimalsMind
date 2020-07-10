@@ -7,6 +7,7 @@ public class ChangeForAnimalVision : MonoBehaviour
 {
     public GameObject[] Owl;
     public GameObject[] Dog;
+    public GameObject[] Cat;
     public string currentAnimal = "Bolotas";
     public string CurrentAnimal;
     enum Part
@@ -37,6 +38,15 @@ public class ChangeForAnimalVision : MonoBehaviour
             //mainAudio.outputAudioMixerGroup = B.outputAudioMixerGroup;
             currentAnimal = animal;
         }
+        else if (string.Compare(animal, "Cat") == 0)
+        {
+
+            Cat[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
+            transform.position = Cat[(int)Part.Animal].transform.position;
+            //AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
+            //mainAudio.outputAudioMixerGroup = B.outputAudioMixerGroup;
+            currentAnimal = animal;
+        }
         currentAnimal = animal;
         GetComponent<GazeInside>().imgGaze.fillAmount = 0;
 
@@ -53,6 +63,10 @@ public class ChangeForAnimalVision : MonoBehaviour
         {
 
             Dog[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
+        }
+        else if(string.Compare(currentAnimal, "Cat") == 0)
+        {
+            Cat[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
         }
         change(animalGo);
     }

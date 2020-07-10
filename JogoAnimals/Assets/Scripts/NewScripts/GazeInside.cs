@@ -48,8 +48,8 @@ public class GazeInside : MonoBehaviour
                         if (_hit.transform)
                         {
                             imgGaze.fillAmount = 0;
-                            inSpot = true; //triggar 1 vez só (se nao crasha)
                             inState = false;
+                            inSpot = true; //triggar 1 vez só (se nao crasha)
                             //_hit.transform.gameObject.GetComponent<ZoomIn>().zoomIn();
                             transform.gameObject.GetComponent<ChangeForAnimalVision>().changeOther(_hit.transform.name);
                             //inState = false;

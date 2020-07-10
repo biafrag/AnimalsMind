@@ -44,8 +44,12 @@ public class TouchAnimal : MonoBehaviour
                 {
                     S = "Deu ruim";
                     print(S);
-                    cam.transform.gameObject.GetComponent<ChangeForAnimalVision>().change(_hit.transform.name);
-                    inState = false;
+                    GVROff();
+                    if(!_hit.transform.gameObject.CompareTag("Button"))
+                    {
+                        cam.transform.gameObject.GetComponent<ChangeForAnimalVision>().change(_hit.transform.name);
+                        inState = false;
+                    }
                 }
             }
         }
