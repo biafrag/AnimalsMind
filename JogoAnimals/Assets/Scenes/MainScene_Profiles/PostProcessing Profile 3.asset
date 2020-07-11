@@ -31,11 +31,11 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   minColor:
-    overrideState: 0
+    overrideState: 1
     value: {r: 0.3543482, g: 0.19999999, b: 0.7647059, a: 1}
   midColor:
     overrideState: 1
-    value: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    value: {r: 0.015686274, g: 1, b: 0.39244506, a: 1}
   maxColor:
-    overrideState: 0
+    overrideState: 1
     value: {r: 1, g: 0, b: 0, a: 1}

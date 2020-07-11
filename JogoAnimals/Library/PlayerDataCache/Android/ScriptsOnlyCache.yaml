@@ -44,7 +44,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -77,8 +76,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -104,69 +101,69 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11286}
-    - Class: 114
       Script: {instanceID: 11288}
     - Class: 114
       Script: {instanceID: 11290}
     - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11298}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11300}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11588}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11592}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11796}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 12058}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 12062}
     - Class: 114
-      Script: {instanceID: 12418}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12664}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 12524}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 13280}
+      Script: {instanceID: 12978}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13130}
     - Class: 114
-      Script: {instanceID: 13474}
+      Script: {instanceID: 13178}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13286}
     - Class: 114
-      Script: {instanceID: 13534}
+      Script: {instanceID: 13288}
     - Class: 114
-      Script: {instanceID: 13566}
+      Script: {instanceID: 13480}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13490}
     - Class: 114
-      Script: {instanceID: 15928}
+      Script: {instanceID: 13540}
     - Class: 114
-      Script: {instanceID: 90438}
+      Script: {instanceID: 13572}
     - Class: 114
-      Script: {instanceID: 158820}
+      Script: {instanceID: 13610}
+    - Class: 114
+      Script: {instanceID: 16078}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -310,6 +307,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: MotionBlur
+  - hash:
+      serializedVersion: 2
+      Hash: 14b49715d99a89cfb811c7a2170dded6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeMaterial
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -672,6 +675,12 @@ ScriptsOnlyBuild:
     className: GvrTrackedController
   - hash:
       serializedVersion: 2
+      Hash: a8ba543a45374257c108ab401fe2c26f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ThermalVision
+  - hash:
+      serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -696,7 +705,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 76b62d429645e3b7a3a89a9fa015110f
+      Hash: f7d1e540e5f1a004b8ca0ceb30507705
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangeForAnimalVision
@@ -894,7 +903,7 @@ ScriptsOnlyBuild:
     className: ScrubberEvents
   - hash:
       serializedVersion: 2
-      Hash: ccec66d8eb783910d410cebd8c13a385
+      Hash: 4b99794023b8665bdbf4c4b43ba6564d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BackToMainView
@@ -1108,18 +1117,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a8ba543a45374257c108ab401fe2c26f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ThermalVision
-  - hash:
-      serializedVersion: 2
-      Hash: 14b49715d99a89cfb811c7a2170dded6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeMaterial
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
