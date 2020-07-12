@@ -42,8 +42,6 @@ public class TouchAnimal : MonoBehaviour
             {
                 if (imgGaze.fillAmount == 1)
                 {
-                    S = "Deu ruim";
-                    print(S);
                     GVROff();
                     if(!_hit.transform.gameObject.CompareTag("Button"))
                     {
@@ -58,6 +56,8 @@ public class TouchAnimal : MonoBehaviour
     public void GVROn()
     {
         imgGaze.fillAmount = 0;
+        S = "Deu ruim";
+        print(S);
         gvrTimer = 0;
         gvrStatus = true;
         S = "Touch Animal";

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 4049529752749719682}
+  - {fileID: 8891931211476008347}
 --- !u!114 &4049529752749719682
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1325,3 +1326,28 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &8891931211476008347
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daec0355f3db91e4cb12a72c66469ad6, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  downsample:
+    overrideState: 1
+    value: 0
+  blurSize:
+    overrideState: 1
+    value: 1.5
+  blurIterations:
+    overrideState: 1
+    value: 2

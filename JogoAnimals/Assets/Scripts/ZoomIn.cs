@@ -30,10 +30,13 @@ public class ZoomIn : MonoBehaviour
     {
         if(playerCamera.transform.position == animalSpot.position)
         {
-        	zoom = false;
-            zoomJustFinished = true;
-            button.SetActive(true);
-            transform.gameObject.GetComponent<TouchAnimal>().inState = true;
+            if(zoom == true)
+            {
+                zoom = false;
+                zoomJustFinished = true;
+                button.SetActive(true);
+                transform.gameObject.GetComponent<TouchAnimal>().inState = true;
+            }
         }
     }
 }

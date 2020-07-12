@@ -22,6 +22,7 @@ public class GazeVR : MonoBehaviour
     void Start()
     {
         inState = true;
+        gvrStatus = false;
     }
 
     // Update is called once per frame

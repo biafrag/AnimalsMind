@@ -7,10 +7,12 @@ public class ChangeForAnimalVision : MonoBehaviour
 {
     public GameObject[] Owl;
     public GameObject[] Dog;
-    public GameObject[] Cat;
+    //public GameObject[] Cat;
     public GameObject[] Snake;
+    public GameObject[] Tiger;
     public string currentAnimal = "Bolotas";
     public string CurrentAnimal;
+    public GameObject Pointer;
     enum Part
     {
         Animal,
@@ -29,21 +31,25 @@ public class ChangeForAnimalVision : MonoBehaviour
             AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
             AudioSource audio = Owl[(int)Part.Audio].GetComponent<AudioSource>();
             mainAudio.outputAudioMixerGroup = audio.outputAudioMixerGroup;
+            mainAudio.volume = 0.12f;
         }
         else if (string.Compare(animal, "AnimatedDog") == 0)
         {
 
             Dog[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
             transform.position = Dog[(int)Part.Animal].transform.position;
+            Pointer.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
             //AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
             //mainAudio.outputAudioMixerGroup = B.outputAudioMixerGroup;
+            AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
+            mainAudio.volume = 0.80f;
             currentAnimal = animal;
         }
-        else if (string.Compare(animal, "Cat") == 0)
+        else if (string.Compare(animal, "Tiger") == 0)
         {
 
-            Cat[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
-            transform.position = Cat[(int)Part.Animal].transform.position;
+            Tiger[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("PostProcessing");
+            transform.position = Tiger[(int)Part.Animal].transform.position;
             //AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
             //mainAudio.outputAudioMixerGroup = B.outputAudioMixerGroup;
             currentAnimal = animal;
@@ -57,6 +63,7 @@ public class ChangeForAnimalVision : MonoBehaviour
             //AudioSource mainAudio = GameObject.FindObjectOfType<AudioSource>();
             //mainAudio.outputAudioMixerGroup = B.outputAudioMixerGroup;
             currentAnimal = animal;
+           // Handheld.Vibrate();
         }
         currentAnimal = animal;
         GetComponent<GazeInside>().imgGaze.fillAmount = 0;
@@ -74,10 +81,11 @@ public class ChangeForAnimalVision : MonoBehaviour
         {
 
             Dog[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
+            Pointer.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
         }
-        else if(string.Compare(currentAnimal, "Cat") == 0)
+        else if(string.Compare(currentAnimal, "Tiger") == 0)
         {
-            Cat[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
+            Tiger[(int)Part.PostProcessing].layer = LayerMask.NameToLayer("Default");
         }
         else if (string.Compare(currentAnimal, "Snake") == 0)
         {

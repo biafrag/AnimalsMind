@@ -37,13 +37,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -121,6 +114,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11592}
     - Class: 114
+      Script: {instanceID: 11600}
+    - Class: 114
       Script: {instanceID: 11714}
     - Class: 114
       Script: {instanceID: 11746}
@@ -133,6 +128,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12062}
     - Class: 114
+      Script: {instanceID: 12122}
+    - Class: 114
       Script: {instanceID: 12164}
     - Class: 114
       Script: {instanceID: 12226}
@@ -142,6 +139,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12524}
     - Class: 114
       Script: {instanceID: 12670}
+    - Class: 114
+      Script: {instanceID: 12960}
     - Class: 114
       Script: {instanceID: 12978}
     - Class: 114
@@ -163,7 +162,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13610}
     - Class: 114
-      Script: {instanceID: 16078}
+      Script: {instanceID: 16128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -705,7 +704,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: f7d1e540e5f1a004b8ca0ceb30507705
+      Hash: 9c49a6247a35fec8a525d9eed5ad17f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangeForAnimalVision
