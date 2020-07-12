@@ -22,6 +22,7 @@ public class TouchAnimal : MonoBehaviour
     void Start()
     {
         inState = false;
+        gvrStatus = false;
         cam = GameObject.Find("MainCameraRig");
     }
 

@@ -22,6 +22,8 @@ public class GazeInside : MonoBehaviour
     void Start()
     {
         inState = false;
+        gvrStatus = false;
+
     }
 
     // Update is called once per frame
